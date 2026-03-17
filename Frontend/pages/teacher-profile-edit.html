@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Teacher Profile | EvalEra</title>
+  <meta name="viewport" content="width=1440, initial-scale=1" />
+  <link rel="stylesheet" href="../style.css" />
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, sans-serif;
+      background: #f9fafb;
+    }
+
+    .container {
+      display: flex;
+      height: 100vh;
+    }
+
+    .sidebar {
+      width: 250px;
+      background-color: #4F46E5;
+      color: white;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .sidebar h2 {
+      margin-bottom: 40px;
+      font-size: 1.8rem;
+    }
+
+    .sidebar a {
+      color: white;
+      text-decoration: none;
+      margin: 10px 0;
+      padding: 10px 14px;
+      border-radius: 6px;
+      display: block;
+      transition: background 0.3s;
+    }
+
+    .sidebar a:hover,
+    .sidebar a.active {
+      background-color: #3730a3;
+    }
+
+    .main {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .header {
+      background-color: white;
+      padding: 20px 30px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .header h1 {
+      font-size: 1.5rem;
+      color: #333;
+    }
+
+    .header button {
+      background: #ef4444;
+      color: white;
+      border: none;
+      padding: 10px 16px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .content {
+      padding: 40px;
+    }
+
+    .profile-card {
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      max-width: 600px;
+      margin: 0 auto;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    }
+
+    .profile-card h2 {
+      font-size: 1.6rem;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    .profile-info {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .info-row {
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 1px solid #eee;
+      padding: 10px 0;
+    }
+
+    .info-label {
+      font-weight: 600;
+      color: #555;
+    }
+
+    .info-value {
+      color: #333;
+    }
+
+    .edit-btn {
+      margin-top: 20px;
+      padding: 10px 16px;
+      background-color: #4F46E5;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    .edit-btn:hover {
+      background-color: #3730a3;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <h2>EvalEra</h2>
+    <a href="teacher-dashboard.html">Dashboard</a>
+    <a href="teacher-submissions.html">Submissions</a>
+    <a href="teacher-evaluations.html">Evaluations</a>
+    <a href="teacher-profile.html" class="active">Profile</a>
+  </aside>
+
+  <!-- Main -->
+  <main class="main">
+    <div class="header">
+      <h1>My Profile</h1>
+      <button onclick="alert('Logout not implemented')">Logout</button>
+    </div>
+
+    <div class="content">
+      <div class="profile-card">
+        <h2>Dr. Meera Kapoor</h2>
+        <div class="profile-info">
+          <div class="info-row">
+            <div class="info-label">Email:</div>
+            <div class="info-value">meera.kapoor@college.edu</div>
+          </div>
+          <div class="info-row">
+            <div class="info-label">Department:</div>
+            <div class="info-value">Computer Science</div>
+          </div>
+          <div class="info-row">
+            <div class="info-label">Designation:</div>
+            <div class="info-value">Assistant Professor</div>
+          </div>
+          <div class="info-row">
+            <div class="info-label">Employee ID:</div>
+            <div class="info-value">FCS56789</div>
+          </div>
+        </div>
+        <button class="edit-btn" onclick="window.location.href='teacher-profile-edit.html'">Edit Profile</button>
+      </div>
+    </div>
+  </main>
+</div>
+<script src="../script.js"></script>
+
+</body>
+</html>

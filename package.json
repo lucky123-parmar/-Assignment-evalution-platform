@@ -1,0 +1,30 @@
+{
+  "name": "evalera",
+  "version": "1.0.0",
+  "description": "Smart Assignment Evaluation for Students & Teachers",
+  "main": "start.js",
+  "scripts": {
+    "start": "node start.js",
+    "dev": "node start.js",
+    "backend": "cd Backend && node server.js",
+    "frontend": "npx http-server Frontend -p 3000 -o",
+    "install-deps": "cd Backend && npm install",
+    "setup": "node setup.js",
+    "test": "node test-integration.js"
+  },
+  "keywords": [
+    "assignment",
+    "evaluation",
+    "education",
+    "ai",
+    "code-editor"
+  ],
+  "author": "EvalEra Team",
+  "license": "MIT",
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  },
+  "dependencies": {
+    "node-fetch": "^3.3.2"
+  }
+}

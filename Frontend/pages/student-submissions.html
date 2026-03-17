@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=1440, initial-scale=1" />
+  <title>Student Submissions – EvalEra</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="../style.css" />
+  <style>
+    body {
+      background: #f0f2f5;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .container {
+      display: flex;
+      height: 100vh;
+    }
+
+    .sidebar {
+      width: 260px;
+      background: #fff;
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      padding: 20px;
+      box-shadow: 2px 0 5px rgba(0,0,0,0.05);
+    }
+
+    .sidebar .logo {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: #4F46E5;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+
+    .sidebar a {
+      color: #555;
+      text-decoration: none;
+      margin: 8px 0;
+      padding: 12px 18px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    .sidebar a i {
+      font-size: 1.1rem;
+    }
+
+    .sidebar a:hover,
+    .sidebar a.active {
+      background-color: #4F46E5;
+      color: white;
+    }
+    .main-content {
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      background: #f9fafc;
+    }
+    .header {
+      background: white;
+      padding: 20px 30px;
+      box-shadow: 0 1px 6px rgba(0,0,0,0.1);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-weight: 600;
+      font-size: 1.2rem;
+      user-select: none;
+    }
+    .header .welcome {
+      color: #4F46E5;
+    }
+    .dashboard-main {
+      flex-grow: 1;
+      padding: 30px;
+      overflow-y: auto;
+    }
+    h3 {
+      margin-top: 0;
+      margin-bottom: 20px;
+      color: #374151;
+      font-weight: 700;
+    }
+    /* Table Styles */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: white;
+      box-shadow: 0 2px 8px rgb(0 0 0 / 0.1);
+      border-radius: 8px;
+      overflow: hidden;
+      user-select: none;
+    }
+    th, td {
+      padding: 15px 20px;
+      text-align: left;
+      border-bottom: 1px solid #e5e7eb;
+    }
+    th {
+      background-color: #4F46E5;
+      color: white;
+      font-weight: 700;
+      user-select: none;
+    }
+    tr:hover {
+      background-color: #eef2ff;
+    }
+    .status {
+      padding: 6px 12px;
+      border-radius: 12px;
+      color: white;
+      font-weight: 600;
+      font-size: 0.9rem;
+      display: inline-block;
+      user-select: none;
+    }
+    .status.pending {
+      background-color: #fbbf24; /* Amber */
+    }
+    .status.submitted {
+      background-color: #3b82f6; /* Blue */
+    }
+    .status.graded {
+      background-color: #10b981; /* Green */
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+    <div class="logo">EvalEra</div>
+    <a href="student-dashboard.html"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
+    <a href="student-submissions.html" class="active"><i class="fas fa-file-alt"></i> Submissions</a>
+    <a href="student-profile.html"><i class="fas fa-user"></i> Profile</a>
+    <a href="code-editor.html"><i class="fas fa-code"></i> Code Editor</a>
+  </aside>
+
+    <!-- Main content -->
+    <main class="main-content">
+      <header class="header">
+        <div class="welcome">Welcome, Varsha!</div>
+        <div>
+          <button onclick="alert('Logout not implemented')" style="background:#4F46E5; color:#fff; border:none; padding:8px 16px; border-radius:5px; cursor:pointer;">Logout</button>
+        </div>
+      </header>
+
+      <section class="dashboard-main">
+        <h3>Your Submissions</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Assignment Title</th>
+              <th>Submitted On</th>
+              <th>Status</th>
+              <th>Score</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>CSS Assignment 1</td>
+              <td>2025-07-15</td>
+              <td><span class="status submitted">Submitted</span></td>
+              <td>—</td>
+            </tr>
+            <tr>
+              <td>HTML Assignment 1</td>
+              <td>2025-07-10</td>
+              <td><span class="status graded">Graded</span></td>
+              <td>92%</td>
+            </tr>
+            <tr>
+              <td>Javascript Assignment</td>
+              <td>—</td>
+              <td><span class="status pending">Pending</span></td>
+              <td>—</td>
+            </tr>
+            <tr>
+              <td>CSS Assignment 2</td>
+              <td>2025-07-01</td>
+              <td><span class="status graded">Graded</span></td>
+              <td>87%</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </main>
+  </div>
+  <script src="../script.js"></script>
+
+</body>
+</html>

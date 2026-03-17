@@ -1,0 +1,23 @@
+Folder PATH listing for volume OS
+Volume serial number is 8489-E9B9
+C:.
+|   index.html
+|   script.js
+|   style.css
+|   tree.txt
+|   
++---Assets
+\---pages
+        code-editor.html
+        login.html
+        register.html
+        student-dashboard.html
+        student-profile-edit.html
+        student-profile.html
+        student-submissions.html
+        teacher-dashboard.html
+        teacher-evaluations.html
+        teacher-profile-edit.html
+        teacher-profile.html
+        teacher-submissions.html
+        

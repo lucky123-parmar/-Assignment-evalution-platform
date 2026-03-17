@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=1440, initial-scale=1" />
+  <title>Student Profile – EvalEra</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="../style.css" />
+  <style>
+    body {
+      background: #f0f2f5;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .container {
+      display: flex;
+      height: 100vh;
+    }
+
+    .sidebar {
+      width: 260px;
+      background: #fff;
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      padding: 20px;
+      box-shadow: 2px 0 5px rgba(0,0,0,0.05);
+    }
+
+    .sidebar .logo {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: #4F46E5;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+
+    .sidebar a {
+      color: #555;
+      text-decoration: none;
+      margin: 8px 0;
+      padding: 12px 18px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    .sidebar a i {
+      font-size: 1.1rem;
+    }
+
+    .sidebar a:hover,
+    .sidebar a.active {
+      background-color: #4F46E5;
+      color: white;
+    }
+    .main-content {
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      background: #f9fafc;
+    }
+    .header {
+      background: white;
+      padding: 20px 30px;
+      box-shadow: 0 1px 6px rgba(0,0,0,0.1);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-weight: 600;
+      font-size: 1.2rem;
+      user-select: none;
+    }
+    .header .welcome {
+      color: #4F46E5;
+    }
+    .dashboard-main {
+      flex-grow: 1;
+      padding: 30px 60px;
+      overflow-y: auto;
+      color: #374151;
+    }
+    h3 {
+      margin-top: 0;
+      margin-bottom: 30px;
+      color: #374151;
+      font-weight: 700;
+      font-size: 2rem;
+      user-select: none;
+    }
+    .profile-card {
+      background: white;
+      border-radius: 10px;
+      padding: 40px 60px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.1);
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    .profile-row {
+      display: flex;
+      margin-bottom: 25px;
+      user-select: none;
+    }
+    .profile-label {
+      flex: 1;
+      font-weight: 600;
+      font-size: 1.1rem;
+      color: #4F46E5;
+    }
+    .profile-value {
+      flex: 2;
+      font-size: 1.1rem;
+      color: #1f2937;
+    }
+    .edit-btn {
+      display: inline-block;
+      background-color: #4F46E5;
+      color: white;
+      padding: 12px 28px;
+      font-size: 1rem;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+      margin-top: 40px;
+      user-select: none;
+    }
+    .edit-btn:hover {
+      background-color: #3730a3;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+    <div class="logo">EvalEra</div>
+    <a href="student-dashboard.html"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
+    <a href="student-submissions.html"><i class="fas fa-file-alt"></i> Submissions</a>
+    <a href="student-profile.html" class="active"><i class="fas fa-user"></i> Profile</a>
+    <a href="code-editor.html"><i class="fas fa-code"></i> Code Editor</a>
+  </aside>
+
+    <!-- Main content -->
+    <main class="main-content">
+      <header class="header">
+        <div class="welcome">Welcome, Varsha!</div>
+        <div>
+          <button onclick="alert('Logout not implemented')" style="background:#4F46E5; color:#fff; border:none; padding:8px 16px; border-radius:5px; cursor:pointer;">Logout</button>
+        </div>
+      </header>
+
+      <section class="dashboard-main">
+        <h3>Your Profile</h3>
+        <div class="profile-card">
+          <div class="profile-row">
+            <div class="profile-label">Full Name:</div>
+            <div class="profile-value">Varsha Singh</div>
+          </div>
+          <div class="profile-row">
+            <div class="profile-label">Username:</div>
+            <div class="profile-value">varsha123</div>
+          </div>
+          <div class="profile-row">
+            <div class="profile-label">Email:</div>
+            <div class="profile-value">varsha@example.com</div>
+          </div>
+          <div class="profile-row">
+            <div class="profile-label">University Roll No:</div>
+            <div class="profile-value">U20251234</div>
+          </div>
+          <div class="profile-row">
+            <div class="profile-label">Role:</div>
+            <div class="profile-value">Student</div>
+          </div>
+          <a href="student-profile-edit.html" class="edit-btn">Edit Profile</a>
+        </div>
+      </section>
+    </main>
+  </div>
+  <script src="../script.js"></script>
+
+</body>
+</html>

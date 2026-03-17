@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Teacher Evaluations | EvalEra</title>
+  <meta name="viewport" content="width=1440, initial-scale=1" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="../style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    body {
+      background: #f0f2f5;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .container {
+      display: flex;
+      height: 100vh;
+    }
+
+    .sidebar {
+      width: 260px;
+      background: #fff;
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      padding: 20px;
+      box-shadow: 2px 0 5px rgba(0,0,0,0.05);
+    }
+
+    .sidebar .logo {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: #4F46E5;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+
+    .sidebar a {
+      color: #555;
+      text-decoration: none;
+      margin: 8px 0;
+      padding: 12px 18px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    .sidebar a i {
+      font-size: 1.1rem;
+    }
+
+    .sidebar a:hover,
+    .sidebar a.active {
+      background-color: #4F46E5;
+      color: white;
+    }
+
+    .main {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      padding: 20px 40px;
+      overflow-y: auto;
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 30px;
+    }
+
+    .header h1 {
+      font-size: 2rem;
+      font-weight: 600;
+    }
+
+    .user-profile {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .user-profile img {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+    }
+
+    .user-profile span {
+      font-weight: 500;
+    }
+
+    .logout-btn {
+      background: #f44336;
+      color: white;
+      border: none;
+      padding: 8px 14px;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .logout-btn:hover {
+      background: #d32f2f;
+    }
+
+    .table-container {
+      background: white;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+
+    .table-container h3 {
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    th, td {
+      padding: 12px 15px;
+      text-align: left;
+      border-bottom: 1px solid #eee;
+    }
+
+    th {
+      background-color: #f8f9fa;
+    }
+
+    .action-btn {
+      background: #4F46E5;
+      color: white;
+      padding: 6px 12px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <div class="logo">EvalEra</div>
+    <a href="teacher-dashboard.html"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
+    <a href="teacher-submissions.html"><i class="fas fa-file-alt"></i> Submissions</a>
+    <a href="teacher-evaluations.html" class="active"><i class="fas fa-check-circle"></i> Evaluations</a>
+    <a href="teacher-profile.html"><i class="fas fa-user"></i> Profile</a>
+    <a href="#"><i class="fas fa-cog"></i> Settings</a>
+  </aside>
+
+  <!-- Main Section -->
+  <main class="main">
+    <div class="header">
+      <h1>Evaluated Assignments</h1>
+      <button onclick="alert('Logout not implemented')">Logout</button>
+    </div>
+
+    <div class="content">
+      <table>
+        <thead>
+          <tr>
+            <th>Student</th>
+            <th>Roll No</th>
+            <th>Assignment</th>
+            <th>Grade</th>
+            <th>Comments</th>
+            <th>Date Evaluated</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Varsha Sharma</td>
+            <td>U2025001</td>
+            <td>HTML Layout</td>
+            <td><span class="grade">A</span></td>
+            <td><span class="comment">Well structured and responsive</span></td>
+            <td>July 22, 2025</td>
+          </tr>
+          <tr>
+            <td>Rahul Gupta</td>
+            <td>U2025017</td>
+            <td>CSS Animations</td>
+            <td><span class="grade">B+</span></td>
+            <td><span class="comment">Nice effort, but could use smoother transitions</span></td>
+            <td>July 21, 2025</td>
+          </tr>
+          <tr>
+            <td>Anjali Verma</td>
+            <td>U2025034</td>
+            <td>JS DOM</td>
+            <td><span class="grade">A+</span></td>
+            <td><span class="comment">Excellent interactivity and clean logic</span></td>
+            <td>July 20, 2025</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </main>
+</div>
+<script src="../script.js"></script>
+
+</body>
+</html>
+
+
